@@ -28,3 +28,15 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+/*
+ * bootJar produces the fat/executable jar
+ * jar task produces the thin jar (optional)
+ */
+bootJar {
+    archiveFileName = 'app-fat.jar'
+}
+
+jar {
+    enabled = false   // usually disable thin jar for Boot apps
+}
