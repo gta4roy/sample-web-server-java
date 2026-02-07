@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-perf-web-server
+  labels:
+    app: java-perf-web-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-perf-web-server
+  template:
+    metadata:
+      labels:
+        app: java-perf-web-server
+    spec:
+      containers:
+      - name: web-server
+        image: docker.io/library/perf-java-webserver:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5656
