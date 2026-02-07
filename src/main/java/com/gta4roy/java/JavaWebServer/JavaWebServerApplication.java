@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class JavaWebServerApplication {
-
 	public static void main(String[] args) {
-		SpringApplication.run(MainController.class, args);
+		SpringApplication.run(JavaWebServerApplication.class, args);
 	}
-
 }

@@ -1,0 +1,1 @@
+~/tools/jdk-25.0.2/bin/java -jar build/libs/app-fat.jar --server.port=5656
